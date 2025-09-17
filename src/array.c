@@ -11,7 +11,8 @@ struct Array {
     int size;
     int capacity;
 };
-
+//Array Creation
+//Created by Dipanjan Aich on 15-09-2025
 Array* createArray(int capacity) {
     if (capacity <= 0) {
         return NULL;
@@ -29,7 +30,8 @@ Array* createArray(int capacity) {
     arr->capacity = capacity;
     return arr;
 }
-
+//Insert a value at a specific desired index
+//Created by Harsh Sangwan on 15-09-2025
 void insertArray(Array* arr, int index, int value) {
     if (arr == NULL || arr->size >= arr->capacity || index < 0 || index > arr->size) {
         return;
@@ -40,7 +42,8 @@ void insertArray(Array* arr, int index, int value) {
     arr->data[index] = value;
     arr->size++;
 }
-
+//Delete a value from a desired specific index
+//Created by Kumar Harsh on 15-09-2025
 void deleteArray(Array* arr, int index) {
     if (arr == NULL || index < 0 || index >= arr->size) {
         return;
@@ -50,14 +53,15 @@ void deleteArray(Array* arr, int index) {
     }
     arr->size--;
 }
-
+//Resize the array to a new capacity
 int getArray(Array* arr, int index) {
     if (arr == NULL || index < 0 || index >= arr->size) {
         return INT_MIN;
     }
     return arr->data[index];
 }
-
+//Traverse the array
+//Created by Gaurav Kumar Gupta on 16-09-2025
 void traverseArray(Array* arr) {
     if (arr == NULL) {
         printf("Array is NULL.\n");
@@ -69,7 +73,8 @@ void traverseArray(Array* arr) {
     }
     printf("]\n");
 }
-
+//Resize the array to a new capacity
+//Created by Dipanjan Aich on 16-09-2025
 int resizeArray(Array* arr, int newCapacity) {
     if (arr == NULL || newCapacity < arr->size) {
         return 0;
@@ -82,14 +87,15 @@ int resizeArray(Array* arr, int newCapacity) {
     arr->capacity = newCapacity;
     return 1;
 }
-
+//Free the array and internal data
 void freeArray(Array* arr) {
     if (arr != NULL) {
         free(arr->data);
         free(arr);
     }
 }
-
+//Finding any duplicate in the array
+//Created by Kishlay Kumar Dubey on 15-09-2025
 int findDuplicatesArray(Array* arr) {
     if (arr == NULL) {
         return 0;
