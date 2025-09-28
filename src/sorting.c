@@ -19,6 +19,7 @@ void printArray(const Array *arr) {
 }
 
 // -------------------- Bubble Sort --------------------
+//Created by - Prakash Tiwari on 28-09-25
 void bubbleSort(Array *arr) {
     if (!arr || arr->size <= 1) return;
     for (int i = 0; i < arr->size - 1; i++) {
@@ -36,6 +37,7 @@ void bubbleSort(Array *arr) {
 }
 
 // -------------------- Selection Sort --------------------
+//Created by - Prakash Tiwari on 28-09-25
 void selectionSort(Array *arr) {
     if (!arr || arr->size <= 1) return;
     for (int i = 0; i < arr->size - 1; i++) {
@@ -52,6 +54,7 @@ void selectionSort(Array *arr) {
 }
 
 // -------------------- Insertion Sort --------------------
+////Created by - Prakash Tiwari on 28-09-25
 void insertionSort(Array *arr) {
     if (!arr || arr->size <= 1) return;
     for (int i = 1; i < arr->size; i++) {
@@ -66,6 +69,7 @@ void insertionSort(Array *arr) {
 }
 
 // -------------------- Quick Sort --------------------
+//Created by - Piyush Kumar on 28-09-25
 static void quickSortHelper(int *data, int low, int high) {
     if (low < high) {
         int pivot = data[high];
@@ -88,6 +92,7 @@ void quickSort(Array *arr) {
 }
 
 // -------------------- Merge Sort --------------------
+//Created by - Sahil Ahmad on 28-09-25
 static void merge(int *data, int left, int mid, int right) {
     int n1 = mid - left + 1, n2 = right - mid;
     int *L = malloc(n1 * sizeof(int));
@@ -118,6 +123,7 @@ void mergeSort(Array *arr) {
 }
 
 // -------------------- Counting Sort (non-negative) --------------------
+//Created by - Prince Sagwal on 28-09-25
 void countingSort(Array *arr) {
     if (!arr || arr->size <= 1) return;
     int max = arr->data[0];
@@ -136,6 +142,7 @@ void countingSort(Array *arr) {
 }
 
 // -------------------- Heap Sort --------------------
+//Created by Sahil Ahmad on 28-09-25
 static void heapify(int *data, int n, int i) {
     int largest = i;
     int left = 2*i + 1;
@@ -157,6 +164,7 @@ void heapSort(Array *arr) {
 }
 
 // -------------------- Sort & Remove Duplicates --------------------
+//Created by Raghav Dadwal on 28-09-25
 int sortAndRemoveDuplicates(Array *arr) {
     if (!arr || arr->size == 0) return 0;
     quickSort(arr);  // sort first
