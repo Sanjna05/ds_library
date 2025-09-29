@@ -1,12 +1,7 @@
 //
 // Created by rahul on 06-09-2025.
 //
-//
-// Created by rahul on 06-09-2025.
-//
-//
-// Created by rahul on 06-09-2025.
-//
+
 #include <stdio.h>
 #include "../include/array.h"
 
