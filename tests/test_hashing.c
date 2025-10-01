@@ -2,7 +2,7 @@
 #include"..//src/hashing.c"
 
 int main() {
-    printf("---- Test 1: Create and Insert ----\n");
+    printf("---- Test 1: Create and Insert ----\n");  
     HashTable* ht = createHashTable(5);
     insertHashTable(ht, 10);
     insertHashTable(ht, 20);
