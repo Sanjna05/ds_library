@@ -294,7 +294,7 @@ int findLowestCommonAncestor(BinarySearchTree* bst, int value1, int value2) {
 
 // Function to free the Binary Search Tree
 void freeBinarySearchTree(BinarySearchTree* bst) {
-    void freeNodes(TreeNode* node) {
+    void freeNodes(TreeNode* node){
         if (!node) return;
         freeNodes(node->left);
         freeNodes(node->right);
