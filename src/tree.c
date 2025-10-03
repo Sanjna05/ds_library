@@ -303,4 +303,4 @@ void freeBinarySearchTree(BinarySearchTree* bst) {
     if (!bst) return;
     freeNodes(bst->root);
     free(bst);
-}
+}  
